@@ -10,6 +10,6 @@ default["monitor"]["additional_client_attributes"] = Mash.new
 
 default["monitor"]["sudo_commands"] = Array.new
 
-default["monitor"]["default_handlers"] = node[:monitor][:default_handlers]
-default["monitor"]["metric_handlers"]  = node[:monitor][:metric_handlers]
+default["monitor"]["default_handlers"] = "#{node[:monitor][:default_handlers]}"
+default["monitor"]["metric_handlers"]  = "#{node[:monitor][:metric_handlers]}"
 
