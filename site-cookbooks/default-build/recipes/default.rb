@@ -8,7 +8,6 @@
 #
 
 %w(
-  apt
   ulimit
   ohai
   create-users
