@@ -12,10 +12,5 @@ default[:chef_client][:cron] = {
 }
 
 # motd
-default["motd-tail"]["additional_text"] = "//Broadstreet//\n"
+default["motd-tail"]["additional_text"] = "//Yo Mama!//\n"
 
-# monit
-default[:monit][:notify_email]        = "john.crepezzi@gmail.com"
-default[:monit][:mail_format][:from]  = "monit@#{node[:ec2][:public_hostname]}"
-default[:monit][:poll_start_delay]    = 30
-default[:monit][:poll_period]         = 30
