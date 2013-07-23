@@ -17,6 +17,8 @@
 # limitations under the License.
 #
 
+include_recipe "monitor::_pagerduty_handler"
+include_recipe "monitor::_irc_handler"
 include_recipe "monitor::_master_search"
 
 include_recipe "sensu::default"
