@@ -1,0 +1,12 @@
+/var/log/chef/*.log {
+  daily
+  missingok
+  rotate 2
+  compress
+  dateext
+  copytruncate
+  noolddir
+  sharedscripts
+  postrotate
+  endscript
+}

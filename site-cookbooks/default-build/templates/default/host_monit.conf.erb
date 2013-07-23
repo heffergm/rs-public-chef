@@ -1,0 +1,16 @@
+## System memory/cpu
+check system <%= node[:ec2][:public_hostname] %>
+  if loadavg (15min) > <%= (node[:cpu][:total].to_f / 1.5).round -%> for 10 cycles then alert
+  if memory usage > 98% for 10 cycles then alert
+  if cpu usage (wait) > 10% for 10 cycles then alert
+  group host
+
+## Disk
+check device root-70 with path / every 4 cycles
+  if space usage > 70% then alert
+  group disk
+
+check device root-90 with path / every 4 cycles
+  if space usage > 90% then alert
+  group disk
+
