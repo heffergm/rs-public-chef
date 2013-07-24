@@ -19,7 +19,7 @@
 
 sensu_check "foo_bar_test_process" do
   command "check-procs.rb -p foobar -w 2 -c 3 -C 1"
-  handlers ["default"]
+  handlers ["debug"]
   standalone true
   interval 30
 end
