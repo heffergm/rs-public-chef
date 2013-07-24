@@ -8,7 +8,7 @@ version          '0.1.0'
 
 recipe "default_build", "Default stuff"
 
-%w(ulimit apt chef-client ohai create-users git motd-tail build-essential).each do |p|
+%w(ulimit apt chef-client ohai git motd-tail build-essential).each do |p|
   depends p
 end
 

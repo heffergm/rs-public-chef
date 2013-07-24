@@ -10,7 +10,6 @@
 %w(
   ulimit
   ohai
-  create-users
   git
   motd-tail
   build-essential
