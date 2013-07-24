@@ -24,3 +24,9 @@ sensu_check "foo_bar_test_process" do
   interval 30
 end
 
+sensu_check 'orbital_http_response' do
+  command "check-http.rb -u 'orbital1.paymentech.net' -p '/authorize' -s true -t 5 -q 'match_this_pattern'"
+  handlers ["default"]
+  standalone true
+  interval 10
+end
